@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Conversor Fahrenheit a Celsius</h1>
+    <input type="number" id="fahrenheit" value="100">
+    <button type="button" id="btn">Calcular</button>
+
+    <p id="celsius"></p>
+
+    <script>
+
+        //Accedemos al botón por su id:
+        var button = document.getElementById('btn');
+
+        //Creamos un evento al pulsar el botón:
+        button.onclick = () =>{
+            //Accedemos al valor introducido en el input
+            var fahrenheit = document.getElementById('fahrenheit').value;
+            //Conversión:
+            var celsius = (fahrenheit - 32) * (5 / 9);
+            //Mostramos la conversión en la etiqueta p
+            var result = document.getElementById('celsius');
+            result.innerHTML = celsius;
+        }
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
